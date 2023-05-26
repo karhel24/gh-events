@@ -3,9 +3,13 @@ on:
   pull_request:
     types:
       - opened
+    branches:
+      - 'dev'
   push:
     branches:
       - 'main'
+    paths-ignore:
+      - './github/workflows/*'
   workflow_dispatch:
 jobs:
   deploy:
